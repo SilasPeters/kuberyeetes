@@ -1,0 +1,19 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: kustomize-development
+
+labels:
+- includeSelectors: false
+  pairs:
+    env: development
+
+namePrefix: development-
+
+replicas:
+- name: ratshapes-deployment
+  count: 3
+
+resources:
+- ../../base
+
