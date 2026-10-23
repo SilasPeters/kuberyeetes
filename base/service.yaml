@@ -7,7 +7,7 @@ spec:
     app: ratshapes
   type: LoadBalancer
   ports:
-    - name: ratshapes-service
+    - name: rs-service
       protocol: TCP
       port: 80
-      targetPort: ratshapes-api
+      targetPort: rs-api
