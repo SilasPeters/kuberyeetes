@@ -17,11 +17,11 @@ spec:
         ports:
         - containerPort: 8000
           name: rs-api
-      # - name: ratshapes-frontend
-      #   image: ghcr.io/silaspeters/rat-shapes-frontend:latest
-      #   ports:
-      #   - containerPort: 8080
-      #     name: rs-frontend
-      #   env:
-      #   - name: API_BASE_URL
-      #     value: http://localhost:8000
+      - name: ratshapes-frontend
+        image: ghcr.io/silaspeters/rat-shapes-frontend:latest
+        ports:
+        - containerPort: 8080
+          name: rs-frontend
+        env:
+        - name: API_BASE_URL
+          value: http://ratshapes-api:8000
